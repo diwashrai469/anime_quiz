@@ -30,6 +30,7 @@ class SignupViewModel extends BaseModel {
         }
       },
       (SignupResponseModel data) async {
+        print(data.token);
         print("signedup sucessfully");
         _toastService.s("Sucessfully logedIn");
       },

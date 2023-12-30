@@ -3,7 +3,7 @@ import '../common/constant/app_dimens.dart';
 
 //Add your custom colors and fonts for the app in this file
 const fontFamily = "Poppins";
-const primaryColor = Color.fromRGBO(5, 46, 83, 1);
+const primaryColor = Color.fromARGB(255, 183, 227, 247);
 const secondaryColor = Color(0xFF2d3032);
 
 //Other colors for app

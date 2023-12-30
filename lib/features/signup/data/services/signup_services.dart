@@ -14,7 +14,8 @@ class SignupServices {
       required String password,
       required fullname,
       required String username}) async {
-    final response = await _dioService.http.get("/users/signup",
+    print("called");
+    final response = await _dioService.http.post("/users/signup/",
         data: {"username": username, "password": password, "email": email});
     return SignupResponseModel.fromJson(response.data);
   }

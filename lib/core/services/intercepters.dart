@@ -11,7 +11,7 @@ class DioService {
   final LocalStorageService _localStorageService;
   DioService(this._localStorageService) {
     _dio = Dio();
-    _dio.options.baseUrl = "192.168.1.82";
+    _dio.options.baseUrl = "http://192.168.1.82:8000";
 
     _dio.interceptors.add(
       InterceptorsWrapper(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-TextStyle? appTextStyle(BuildContext context) {
-  return Theme.of(context).textTheme.bodyMedium;
+TextStyle? appTextStyle() {
+  return Theme.of(Get.context!).textTheme.bodyMedium;
 }
