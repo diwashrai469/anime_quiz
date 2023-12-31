@@ -11,7 +11,7 @@ class DioService {
   final LocalStorageService _localStorageService;
   DioService(this._localStorageService) {
     _dio = Dio();
-    _dio.options.baseUrl = "http://192.168.1.82:8000";
+    _dio.options.baseUrl = "https://raikanxa.pythonanywhere.com";
 
     _dio.interceptors.add(
       InterceptorsWrapper(
@@ -32,8 +32,7 @@ class DioService {
               _localStorageService.clear(LocalStorageKeys.accessToken);
 
               Future.delayed(const Duration(milliseconds: 100), () {
-                //401 Status code mainly refers to unauthorization
-                //navigate to login screen or do some action.
+                //
               });
             }
           }

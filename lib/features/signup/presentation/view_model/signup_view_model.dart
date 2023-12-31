@@ -26,7 +26,7 @@ class SignupViewModel extends BaseModel {
     result.fold(
       (NetworkFailure error) {
         if (error.message?.isNotEmpty == true) {
-          ToastService().e("Error login user");
+          ToastService().e(error.message.toString());
         }
       },
       (SignupResponseModel data) async {
