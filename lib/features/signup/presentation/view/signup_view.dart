@@ -6,6 +6,7 @@ import 'package:anime_quiz/common/widgets/k_textformfield.dart';
 import 'package:anime_quiz/core/services/injectable/injectable.dart';
 import 'package:anime_quiz/features/signup/presentation/view_model/signup_view_model.dart';
 import 'package:anime_quiz/theme/app_theme.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,7 +26,7 @@ class SingnupView extends StatelessWidget {
         body: GetBuilder<SignupViewModel>(
           builder: (controller) {
             return Padding(
-              padding: AppDimens.mainPagePadding,
+              padding: AppDimes.mainPagePadding,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -35,13 +36,13 @@ class SingnupView extends StatelessWidget {
                         TextSpan(
                           text: 'Welcome TO ',
                           style: TextStyle(
-                            fontSize: AppDimens.headlineFontSizeOther,
+                            fontSize: AppDimes.headlineFontSizeOther,
                           ),
                         ),
                         TextSpan(
                           text: 'QuizAnime',
                           style: TextStyle(
-                              fontSize: AppDimens.headlineFontSizeOther,
+                              fontSize: AppDimes.headlineFontSizeOther,
                               fontWeight: FontWeight.bold,
                               color: Colors.lightBlue),
                         ),
@@ -95,9 +96,9 @@ class SingnupView extends StatelessWidget {
                               child: Text(
                                 "Signup",
                                 style: appTextStyle()?.copyWith(
-                                    fontWeight: AppDimens.lfontweight,
+                                    fontWeight: AppDimes.lfontweight,
                                     color: Colors.white,
-                                    fontSize: AppDimens.headlineFontSizeSSmall),
+                                    fontSize: AppDimes.headlineFontSizeSSmall),
                               ),
                               onPressed: () {
                                 controller.signuUpuser(
@@ -111,24 +112,34 @@ class SingnupView extends StatelessWidget {
                     ),
                   ),
                   mHeightSpan,
-                  Text.rich(
-                    TextSpan(
-                      children: [
+                  Row(
+                    children: [
+                      Text.rich(
                         TextSpan(
-                          text: 'Already have an account? ',
-                          style: TextStyle(
-                            fontSize: AppDimens.headlineFontSizeSSmall,
-                          ),
+                          children: [
+                            TextSpan(
+                              text: 'Already have an account? ',
+                              style: TextStyle(
+                                fontSize: AppDimes.headlineFontSizeSSmall,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'Login',
+                              style: TextStyle(
+                                  fontSize: AppDimes.headlineFontSizeSSmall,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.lightBlue,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.lightBlue),
+                              recognizer: TapGestureRecognizer(),
+                              onEnter: (event) {
+                                print('tapped');
+                              },
+                            ),
+                          ],
                         ),
-                        TextSpan(
-                          text: 'Login',
-                          style: TextStyle(
-                              fontSize: AppDimens.headlineFontSizeSSmall,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.lightBlue),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

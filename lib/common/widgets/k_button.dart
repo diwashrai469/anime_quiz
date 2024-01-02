@@ -29,26 +29,26 @@ class KButton extends StatelessWidget {
   double getFontSizeBySize(ButtonSize size) {
     switch (size) {
       case ButtonSize.xSmall:
-        return AppDimens.buttonFontSizeXSmall;
+        return AppDimes.buttonFontSizeXSmall;
       case ButtonSize.small:
-        return AppDimens.buttonFontSizeSmall;
+        return AppDimes.buttonFontSizeSmall;
       case ButtonSize.medium:
-        return AppDimens.buttonFontSizeMedium;
+        return AppDimes.buttonFontSizeMedium;
       case ButtonSize.large:
-        return AppDimens.buttonFontSizeLarge;
+        return AppDimes.buttonFontSizeLarge;
     }
   }
 
   EdgeInsetsGeometry getPaddingBySize(ButtonSize size) {
     switch (size) {
       case ButtonSize.xSmall:
-        return AppDimens.buttonPaddingXSmall;
+        return AppDimes.buttonPaddingXSmall;
       case ButtonSize.small:
-        return AppDimens.buttonPaddingSmall;
+        return AppDimes.buttonPaddingSmall;
       case ButtonSize.medium:
-        return AppDimens.buttonPaddingMedium;
+        return AppDimes.buttonPaddingMedium;
       case ButtonSize.large:
-        return AppDimens.buttonPaddingLarge;
+        return AppDimes.buttonPaddingLarge;
     }
   }
 
@@ -103,7 +103,7 @@ class KButton extends StatelessWidget {
                 ? const BorderSide(color: disabledColor)
                 : BorderSide.none,
             borderRadius: BorderRadius.all(
-              Radius.circular(AppDimens.sboarderRadisCircular),
+              Radius.circular(AppDimes.sboarderRadisCircular),
             ),
           ),
         ).copyWith(

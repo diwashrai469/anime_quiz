@@ -26,7 +26,7 @@ class KMaterialButton extends StatelessWidget {
         elevation: 0,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
-              AppDimens.globalCircularRadius,
+              AppDimes.globalCircularRadius,
             ),
             side: BorderSide(color: bordercolor ?? Colors.grey.shade400)),
         color: color,

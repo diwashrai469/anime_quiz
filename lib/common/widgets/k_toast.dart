@@ -70,7 +70,7 @@ class KToast extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     fontFamily: fontFamily,
                     fontWeight: FontWeight.bold,
-                    fontSize: AppDimens.headlineFontSizeXXSmall,
+                    fontSize: AppDimes.headlineFontSizeXXSmall,
                     color: Colors.white,
                   ),
             ),

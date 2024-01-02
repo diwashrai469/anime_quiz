@@ -63,7 +63,7 @@ abstract class AppThemes {
         backgroundColor: primaryColor,
         elevation: 0,
         titleTextStyle: ThemeData.light().textTheme.bodyMedium?.copyWith(
-            fontSize: AppDimens.headlineFontSizeSmall1, color: Colors.white),
+            fontSize: AppDimes.headlineFontSizeSmall1, color: Colors.white),
         iconTheme: const IconThemeData(color: Colors.white)),
     textTheme: ThemeData.light()
         .textTheme
@@ -74,7 +74,7 @@ abstract class AppThemes {
         .copyWith(
           bodyMedium: ThemeData.light().textTheme.bodyMedium?.copyWith(
                 color: secondaryColor,
-                fontSize: AppDimens.headlineFontSizeXXSmall,
+                fontSize: AppDimes.headlineFontSizeXXSmall,
                 fontFamily: fontFamily,
                 fontWeight: FontWeight.w300,
                 letterSpacing: 0.3,

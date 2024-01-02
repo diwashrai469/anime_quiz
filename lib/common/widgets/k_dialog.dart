@@ -114,7 +114,7 @@ class _DialogBoxContentState extends State<DialogBoxContent> {
                     textAlign: widget.messageTextAlign ?? TextAlign.center,
                     widget.message ?? '',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontSize: AppDimens.headlineFontSizeXSmall,
+                          fontSize: AppDimes.headlineFontSizeXSmall,
                         ),
                   ),
                 ),
@@ -216,7 +216,7 @@ class _IosDialogBoxContentState extends State<IosDialogBoxContent> {
             textAlign: widget.messageTextAlign ?? TextAlign.center,
             widget.message ?? '',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  fontSize: AppDimens.headlineFontSizeXSmall,
+                  fontSize: AppDimes.headlineFontSizeXSmall,
                 ),
           ),
           actions: [

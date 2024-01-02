@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 /// and also make design changes easier.
 ///
 
-class AppDimens {
+class AppDimes {
   static const appHeight = 797.7142857142857;
   static const appWidth = 411.42857142857144;
 

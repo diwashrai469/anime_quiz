@@ -1,7 +1,7 @@
 import 'package:anime_quiz/common/constant/app_dimens.dart';
 import 'package:anime_quiz/core/services/injectable/injectable.dart';
 import 'package:anime_quiz/core/services/local_storage.dart';
-import 'package:anime_quiz/features/signup/presentation/view/signup_view.dart';
+import 'package:anime_quiz/features/login/presentation/view/login_view.dart';
 import 'package:anime_quiz/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,14 +15,14 @@ void main(List<String> args) async {
     OKToast(
       position: ToastPosition.bottom,
       child: ScreenUtilInit(
-        designSize: const Size(AppDimens.appWidth, AppDimens.appHeight),
+        designSize: const Size(AppDimes.appWidth, AppDimes.appHeight),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_, child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
             theme: AppThemes.light,
-            home: SingnupView(),
+            home: const LoginView(),
           );
         },
       ),
