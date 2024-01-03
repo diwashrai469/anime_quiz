@@ -39,6 +39,7 @@ class LoginView extends StatelessWidget {
                   ],
                 ),
               ),
+              elHeightSpan,
               Container(
                 decoration: BoxDecoration(
                   color: primaryColor,
@@ -62,30 +63,14 @@ class LoginView extends StatelessWidget {
                       label: 'Password',
                     ),
                     mHeightSpan,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text.rich(
-                          TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'Dont have an account?',
-                                style: TextStyle(
-                                  fontSize: AppDimes.headlineFontSizeXXSmall,
-                                ),
-                              ),
-                              TextSpan(
-                                text: 'Signup',
-                                style: TextStyle(
-                                  fontSize: AppDimes.headlineFontSizeXXSmall,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.lightBlue,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        'Forgot password?',
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: AppDimes.headlineFontSizeXXSmall),
+                      ),
                     ),
                     mHeightSpan,
                     KButton(
@@ -95,7 +80,33 @@ class LoginView extends StatelessWidget {
                         onPressed: () {}),
                   ],
                 ),
-              )
+              ),
+              lHeightSpan,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Dont have an account? ',
+                          style: TextStyle(
+                            fontSize: AppDimes.headlineFontSizeXXSmall,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Signup',
+                          style: TextStyle(
+                            fontSize: AppDimes.headlineFontSizeXXSmall,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlue,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
