@@ -1,4 +1,7 @@
+import 'package:anime_quiz/features/login/presentation/view/login_view.dart';
 import 'package:dio/dio.dart';
+import 'package:get/get.dart';
+import 'package:get/utils.dart';
 import 'package:injectable/injectable.dart';
 import 'local_storage.dart';
 import 'network_services.dart';
@@ -32,7 +35,7 @@ class DioService {
               _localStorageService.clear(LocalStorageKeys.accessToken);
 
               Future.delayed(const Duration(milliseconds: 100), () {
-                //
+                Get.offAll(() => const LoginView());
               });
             }
           }
