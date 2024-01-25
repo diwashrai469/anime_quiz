@@ -13,8 +13,22 @@ class DashBoardView extends StatelessWidget {
       body: Column(children: [
         Row(
           children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
+        )  Row(
+          children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
+        )  Row(
+          children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
+        )  Row(
+          children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
+        )  Row(
+          children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
+        )  Row(
+          children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
+        )  Row(
+          children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
+        )  Row(
+          children: [Text("Ram bahadur"), kChip(child: Text("Level 10"))],
         )
-      ]),
+      ],),
     );
   }
 }
