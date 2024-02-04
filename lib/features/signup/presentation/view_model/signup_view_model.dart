@@ -41,6 +41,9 @@ class SignupViewModel extends BaseModel {
       (SignupResponseModel data) async {
         _toastService.s("Sucessfully signed up");
         _localStorageService.write(LocalStorageKeys.accessToken, data.token);
+        _localStorageService.write(LocalStorageKeys.email, data.user?.email);
+        _localStorageService.write(
+            LocalStorageKeys.userName, data.user?.username);
       },
     );
     setLoading(false);

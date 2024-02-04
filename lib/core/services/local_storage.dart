@@ -4,6 +4,8 @@ import 'package:injectable/injectable.dart';
 class LocalStorageKeys {
   static const accessToken = "AccessToken";
   static const refreshToken = "RefreshToken";
+  static const userName = "UserName";
+  static const email = "email";
 }
 
 @injectable
