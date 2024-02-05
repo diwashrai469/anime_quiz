@@ -11,10 +11,8 @@ import 'package:injectable/injectable.dart';
 @injectable
 class QuizViewModel extends BaseModel {
   final QuizUsercase _quizUsercase;
-  final ToastService _toastService;
   QuizViewModel(
     this._quizUsercase,
-    this._toastService,
   );
   QuizResponseModel? quizResponseModel;
 
@@ -22,10 +20,10 @@ class QuizViewModel extends BaseModel {
   int questionCountIndex = 0;
   RxInt remainingTime = 10.obs;
 
-  @override
-  void onInit() {
-    getTimeoff();
-    super.onInit();
+  initial(int id) {
+    getQuiz(
+      id: id,
+    );
   }
 
   void getTimeoff() {
@@ -58,12 +56,6 @@ class QuizViewModel extends BaseModel {
     update();
   }
 
-  initial(int id) {
-    getQuiz(
-      id: id,
-    );
-  }
-
   void getQuiz({
     required int id,
   }) async {
@@ -81,8 +73,9 @@ class QuizViewModel extends BaseModel {
       (QuizResponseModel data) {
         quizResponseModel = data;
         update();
+        setLoading(false);
+        getTimeoff();
       },
     );
-    setLoading(false);
   }
 }

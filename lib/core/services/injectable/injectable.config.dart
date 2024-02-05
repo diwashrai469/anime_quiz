@@ -79,10 +79,8 @@ extension GetItInjectableX on _i1.GetIt {
         ));
     gh.factory<_i17.QuizUsercase>(
         () => _i17.QuizUsercase(gh<_i11.IQuizRepository>()));
-    gh.factory<_i18.QuizViewModel>(() => _i18.QuizViewModel(
-          gh<_i17.QuizUsercase>(),
-          gh<_i4.ToastService>(),
-        ));
+    gh.factory<_i18.QuizViewModel>(
+        () => _i18.QuizViewModel(gh<_i17.QuizUsercase>()));
     gh.factory<_i19.SignupUsecase>(
         () => _i19.SignupUsecase(gh<_i13.ISignupRepository>()));
     gh.factory<_i20.SignupViewModel>(() => _i20.SignupViewModel(

@@ -14,95 +14,92 @@ class LevelView extends StatelessWidget {
     final cardHeight = 40.h;
     final cardWidth = 150.w;
     return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Select Your Quiz Level",
-                style: appTextStyle()?.copyWith(
-                    fontWeight: AppDimens.lfontweight,
-                    fontSize: AppDimens.headlineFontSizeMedium),
-              ),
-              mHeightSpan,
-              InkWell(
-                onTap: () => Get.to(
-                  () => const QuizView(
-                    id: 1,
-                  ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Select Your Quiz Level",
+              style: appTextStyle()?.copyWith(
+                  fontWeight: AppDimens.lfontweight,
+                  fontSize: AppDimens.headlineFontSizeMedium),
+            ),
+            mHeightSpan,
+            InkWell(
+              onTap: () => Get.to(
+                () => const QuizView(
+                  id: 1,
                 ),
-                child: Card(
-                  child: SizedBox(
-                    height: cardHeight,
-                    width: cardWidth,
-                    child: Center(
-                      child: Text(
-                        "Level One",
-                        style: appTextStyle()?.copyWith(
-                            fontWeight: AppDimens.mfontweight,
-                            fontSize: AppDimens.headlineFontSizeSSmall),
-                      ),
+              ),
+              child: Card(
+                child: SizedBox(
+                  height: cardHeight,
+                  width: cardWidth,
+                  child: Center(
+                    child: Text(
+                      "Level One",
+                      style: appTextStyle()?.copyWith(
+                          fontWeight: AppDimens.mfontweight,
+                          fontSize: AppDimens.headlineFontSizeSSmall),
                     ),
                   ),
                 ),
               ),
-              sHeightSpan,
-              InkWell(
-                onTap: () => Get.to(
-                  () => const QuizView(
-                    id: 2,
-                  ),
+            ),
+            sHeightSpan,
+            InkWell(
+              onTap: () => Get.to(
+                () => const QuizView(
+                  id: 2,
                 ),
-                child: Card(
-                  child: SizedBox(
-                    height: cardHeight,
-                    width: cardWidth,
-                    child: Center(
-                      child: Text(
-                        "Level Two",
-                        style: appTextStyle()?.copyWith(
-                            fontWeight: AppDimens.mfontweight,
-                            fontSize: AppDimens.headlineFontSizeSSmall),
-                      ),
+              ),
+              child: Card(
+                child: SizedBox(
+                  height: cardHeight,
+                  width: cardWidth,
+                  child: Center(
+                    child: Text(
+                      "Level Two",
+                      style: appTextStyle()?.copyWith(
+                          fontWeight: AppDimens.mfontweight,
+                          fontSize: AppDimens.headlineFontSizeSSmall),
                     ),
                   ),
                 ),
               ),
-              sHeightSpan,
-              InkWell(
-                onTap: () => Get.to(
-                  () => const QuizView(
-                    id: 3,
-                  ),
+            ),
+            sHeightSpan,
+            InkWell(
+              onTap: () => Get.to(
+                () => const QuizView(
+                  id: 3,
                 ),
-                child: Card(
-                  child: SizedBox(
-                    width: cardWidth,
-                    height: cardHeight,
-                    child: Center(
-                      child: Text(
-                        "Level Three",
-                        style: appTextStyle()?.copyWith(
-                            fontWeight: AppDimens.mfontweight,
-                            fontSize: AppDimens.headlineFontSizeSSmall),
-                      ),
+              ),
+              child: Card(
+                child: SizedBox(
+                  width: cardWidth,
+                  height: cardHeight,
+                  child: Center(
+                    child: Text(
+                      "Level Three",
+                      style: appTextStyle()?.copyWith(
+                          fontWeight: AppDimens.mfontweight,
+                          fontSize: AppDimens.headlineFontSizeSSmall),
                     ),
                   ),
                 ),
               ),
-              mHeightSpan,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.info),
-                  xsWidthSpan,
-                  const Text(
-                      "You will have 10 seconds to choose your answers."),
-                ],
-              )
-            ],
-          ),
+            ),
+            mHeightSpan,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.info),
+                xsWidthSpan,
+                const Text("You will have 10 seconds to choose your answers."),
+              ],
+            )
+          ],
         ),
       ),
     );
