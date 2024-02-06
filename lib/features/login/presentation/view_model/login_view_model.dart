@@ -24,7 +24,7 @@ class LoginViewModel extends BaseModel {
   TextEditingController userNameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  void loginUser({required String username, required String password}) async {
+  loginUser({required String username, required String password}) async {
     setLoading(true);
 
     var result =

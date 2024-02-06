@@ -56,7 +56,7 @@ class QuizViewModel extends BaseModel {
     update();
   }
 
-  void getQuiz({
+  getQuiz({
     required int id,
   }) async {
     setLoading(true);
