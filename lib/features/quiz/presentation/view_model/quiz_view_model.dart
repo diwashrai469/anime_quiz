@@ -11,9 +11,8 @@ import 'package:injectable/injectable.dart';
 @injectable
 class QuizViewModel extends BaseModel {
   final QuizUsercase _quizUsercase;
-  QuizViewModel(
-    this._quizUsercase,
-  );
+  final ToastService _toastService;
+  QuizViewModel(this._quizUsercase, this._toastService);
   QuizResponseModel? quizResponseModel;
 
   int resultCount = 0;
@@ -67,15 +66,15 @@ class QuizViewModel extends BaseModel {
     result.fold(
       (NetworkFailure error) {
         if (error.message?.isNotEmpty == true) {
-          ToastService().e(error.message.toString());
+          _toastService.e(error.message.toString());
         }
       },
       (QuizResponseModel data) {
         quizResponseModel = data;
         update();
-        setLoading(false);
         getTimeoff();
       },
     );
+    setLoading(false);
   }
 }

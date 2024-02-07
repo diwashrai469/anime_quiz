@@ -15,7 +15,7 @@ import 'package:anime_quiz/features/login/domain/usecase/login_usercase.dart';
 class LoginViewModel extends BaseModel {
   final LoginUsecase _loginUsecase;
   final LocalStorageService _localStorageService;
-  final ToastService _toastService;
+  final ToastService? _toastService;
   LoginViewModel(
     this._loginUsecase,
     this._localStorageService,
@@ -36,7 +36,7 @@ class LoginViewModel extends BaseModel {
         }
       },
       (SignupResponseModel data) async {
-        _toastService.s("Sucessfully logedIn ");
+        _toastService?.s("Sucessfully logedIn ");
         _localStorageService.write(LocalStorageKeys.accessToken, data.token);
         _localStorageService.write(LocalStorageKeys.email, data.user?.email);
         _localStorageService.write(
